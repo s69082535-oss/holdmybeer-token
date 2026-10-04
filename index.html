@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOLDMYBEER ($HMB) — Official Documentation & Airdrop Portal</title>
-  <meta name="description" content="Official portal for HOLDMYBEER (HMB) token on Polygon. Verified contract specs, 0% tax proof, DEX pairs, and the 20 Airdrops campaign rules.">
+  <title>HOLDMYBEER ($HMB) — No-KYC On-Chain Airdrop & Official Polygon Token</title>
+  <meta name="description" content="Official portal for HOLDMYBEER (HMB) on Polygon. Pure on-chain airdrop without KYC, no points, zero social tasks. 20-round transparent distribution, 0% tax, and verified bytecode audit.">
   <link rel="canonical" href="https://s69082535-oss.github.io/holdmybeer-token/">
-
-  <meta name="google-site-verification" content="uJlu2PGHz2QuEdmA5FMCq_Xg6GbY0_w7Jlr-pkv1AOg" />
   
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="uJlu2PGHz2QuEdmA5FMCq_Xg6GbY0_w7Jlr-pkv1AOg" />
+
   <!-- Open Graph / Meta -->
-  <meta property="og:title" content="HOLDMYBEER ($HMB) — Official Token Portal">
-  <meta property="og:description" content="Token specs, static bytecode audit, 0% tax, and live rules for Airdrop #1 (20B Pool).">
+  <meta property="og:title" content="HOLDMYBEER ($HMB) — When Logic Fails, We Ride">
+  <meta property="og:description" content="Decentralized meme-asset with 0% tax, Dual-Pillar Tokenomics, and a 20-Round No-KYC Airdrop Campaign.">
+  <meta property="og:image" content="https://s69082535-oss.github.io/holdmybeer-token/brand.jpg">
   <meta property="og:url" content="https://s69082535-oss.github.io/holdmybeer-token/">
   <meta property="og:type" content="website">
 
@@ -25,6 +27,7 @@
         "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization",
         "name": "HOLDMYBEER Project",
         "url": "https://s69082535-oss.github.io/holdmybeer-token/",
+        "logo": "https://s69082535-oss.github.io/holdmybeer-token/brand.jpg",
         "sameAs": [
           "https://x.com/HmbToken72656",
           "https://github.com/s69082535-oss/holdmybeer-token"
@@ -36,7 +39,7 @@
         "name": "HOLDMYBEER",
         "alternateName": "HMB",
         "category": "CryptoCurrency",
-        "description": "ERC-20 token deployed on Polygon with a fixed supply of 1,000,000,000,000,000 HMB, 0% tax, and a 20-round community distribution campaign.",
+        "description": "ERC-20 token on Polygon PoS with 1,000,000,000,000,000 immutable supply, 0% tax, and a 20-phase pure on-chain distribution model.",
         "url": "https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c",
         "provider": {
           "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization"
@@ -45,8 +48,8 @@
       {
         "@type": "Event",
         "@id": "https://s69082535-oss.github.io/holdmybeer-token/#airdrop1",
-        "name": "HOLDMYBEER Community Airdrop #1",
-        "description": "First of 20 community airdrops distributing 20,000,000,000 HMB to the Top-100 holders holding at least 200,000,000 HMB.",
+        "name": "HOLDMYBEER Community Airdrop #1: The Double Sieve",
+        "description": "20,000,000,000 HMB distributed to Top-100 verified holders. Requires 200M HMB admission ticket and balance retention at snapshot. No KYC, no tasks.",
         "eventStatus": "https://schema.org/EventScheduled",
         "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
         "location": {
@@ -56,6 +59,27 @@
         "organizer": {
           "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization"
         }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is there KYC or social task requirements for HMB Airdrops?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The HOLDMYBEER airdrop is completely decentralized and permissionless: zero KYC, zero points, zero social media chores, and zero arbitrary Sybil bans. Eligibility is verified exclusively on-chain via Polygon ledger balances."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does holding 200,000,000 HMB guarantee an airdrop reward?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. 200,000,000 HMB serves strictly as an Admission Ticket (Filter 1). To receive a reward, a wallet must also place within the Top-100 highest balances (Filter 2) at the moment of the final network snapshot."
+            }
+          }
+        ]
       }
     ]
   }
@@ -63,110 +87,310 @@
 
   <style>
     :root {
-      --bg: #0c0f17;
-      --card-bg: #141926;
-      --border: #222b40;
-      --accent: #8247e5;
-      --accent-hover: #985bf2;
-      --text: #f0f3fa;
-      --text-muted: #94a3b8;
+      --bg: #120f0d;
+      --card-bg: #1c1814;
+      --card-hover: #241f1a;
+      --border: #382e26;
+      --accent-gold: #f59e0b;
+      --accent-gold-light: #fbbf24;
+      --accent-teal: #14b8a6;
+      --text: #fdfbf7;
+      --text-muted: #a89f91;
       --success: #10b981;
+      --danger: #ef4444;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-   
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
       padding: 0 1rem;
     }
-    .container { max-width: 960px; margin: 0 auto; padding: 2rem 0; }
-    header { text-align: center; margin-bottom: 3rem; }
+    .container { max-width: 980px; margin: 0 auto; padding: 2rem 0; }
+
+    /* Hero Branding */
+    .brand-hero {
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(180deg, rgba(245, 158, 11, 0.08) 0%, transparent 100%);
+      padding: 2.5rem 1.5rem;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+    .brand-img-wrap {
+      max-width: 440px;
+      margin: 0 auto 1.5rem;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--accent-gold);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 25px rgba(245, 158, 11, 0.2);
+    }
+    .brand-img-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .brand-slogan {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      text-shadow: 2px 2px 0px #000;
+      margin-bottom: 0.5rem;
+    }
+    .brand-lead {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto 1.5rem;
+    }
     .badge {
       display: inline-block;
-      padding: 0.25rem 0.75rem;
-      background: rgba(130, 71, 229, 0.15);
-      border: 1px solid var(--accent);
-      color: #c4b5fd;
+      padding: 0.35rem 0.9rem;
+      background: rgba(245, 158, 11, 0.15);
+      border: 1px solid var(--accent-gold);
+      color: var(--accent-gold-light);
       border-radius: 9999px;
       font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
       margin-bottom: 1rem;
     }
-    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-    p.lead { color: var(--text-muted); font-size: 1.15rem; }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-    h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-    .spec-item {
-      background: rgba(255, 255, 255, 0.02);
-      padding: 1rem;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-    .spec-label { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; }
-    .spec-value { font-size: 1.1rem; font-weight: 600; margin-top: 0.25rem; word-break: break-all; }
-    .ca-box {
-      background: #06080d;
-      border: 1px solid var(--border);
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
-      font-family: monospace;
-      font-size: 0.95rem;
-      color: #38bdf8;
-      word-break: break-all;
-      margin: 0.5rem 0;
-    }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+
+    /* Buttons */
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
     .btn {
       display: inline-flex;
       align-items: center;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
+      padding: 0.7rem 1.4rem;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 700;
       text-decoration: none;
-      transition: 0.2s;
+      transition: all 0.2s ease;
+      cursor: pointer;
     }
-    .btn-primary { background: var(--accent); color: #fff; }
-    .btn-primary:hover { background: var(--accent-hover); }
-    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
-    .btn-outline:hover { background: rgba(255, 255, 255, 0.05); }
-    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
-    th { color: var(--text-muted); }
-    footer { text-align: center; padding: 3rem 0; color: var(--text-muted); font-size: 0.85rem; }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #120f0d;
+      box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+    }
+    .btn-primary:hover {
+      background: var(--accent-gold-light);
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: var(--card-bg);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    /* Cards & Layout */
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+    h2 {
+      font-size: 1.6rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    h2::before {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 24px;
+      background: var(--accent-gold);
+      border-radius: 3px;
+    }
+    h3 {
+      font-size: 1.2rem;
+      color: var(--accent-gold-light);
+      margin: 1.2rem 0 0.6rem;
+    }
+    p { margin-bottom: 1rem; color: #ddd3c5; }
+
+    /* Specification Grid */
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .spec-item {
+      background: rgba(0,0,0,0.3);
+      padding: 1.2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .spec-label { color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+    .spec-value { font-size: 1.15rem; font-weight: 700; margin-top: 0.3rem; word-break: break-all; }
+    .ca-box {
+      background: #080605;
+      border: 1px dashed var(--accent-gold);
+      padding: 0.9rem 1.2rem;
+      border-radius: 10px;
+      font-family: monospace;
+      font-size: 1rem;
+      color: var(--accent-teal);
+      word-break: break-all;
+      margin: 1rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Pillars of Tokenomics */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .pillar-card {
+      background: rgba(0,0,0,0.35);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border-top: 4px solid var(--accent-gold);
+    }
+    .pillar-card.teal { border-top-color: var(--accent-teal); }
+    .pillar-title { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: #fff; }
+
+    /* The Double Sieve Framework */
+    .sieve-box {
+      background: rgba(245, 158, 11, 0.05);
+      border: 1px solid rgba(245, 158, 11, 0.2);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .sieve-step {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .sieve-step:last-child { margin-bottom: 0; }
+    .sieve-number {
+      background: var(--accent-gold);
+      color: #000;
+      width: 36px;
+      height: 36px;
+      min-width: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+    .sieve-content h4 { font-size: 1.1rem; color: #fff; margin-bottom: 0.3rem; }
+    .warning-note {
+      background: rgba(239, 68, 68, 0.1);
+      border-left: 4px solid var(--danger);
+      padding: 0.8rem 1.2rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: #fca5a5;
+    }
+
+    /* Pillars of Anti-Grind */
+    .no-grind-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .no-grind-item {
+      background: rgba(0,0,0,0.25);
+      border: 1px solid var(--border);
+      padding: 1.2rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .no-grind-item .cross { color: var(--danger); font-size: 1.6rem; font-weight: 900; display: block; }
+    .no-grind-item h5 { font-size: 1.05rem; margin: 0.4rem 0; color: #fff; }
+    .no-grind-item p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+
+    /* Tables */
+    table { width: 100%; border-collapse: collapse; margin-top: 1.2rem; }
+    th, td { text-align: left; padding: 0.9rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    th { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; background: rgba(0,0,0,0.2); }
+    tr:hover { background: rgba(255, 255, 255, 0.02); }
+
+    /* FAQ accordion styled */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 1.2rem 0;
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.4rem; }
+    .faq-a { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; margin: 0; }
+
+    footer {
+      text-align: center;
+      padding: 3rem 0;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <header>
-    <div class="badge">Polygon PoS • ERC-20 Official Portal</div>
-    <h1>HOLDMYBEER ($HMB)</h1>
-    <p class="lead">Decentralized meme-asset with an immutable 0% tax policy and a 20-round transparent holder distribution campaign.</p>
-    <div class="btn-group" style="justify-content: center;">
-      <a href="https://x.com/HmbToken72656" class="btn btn-outline" target="_blank" rel="noopener">Official X (Twitter)</a>
+
+  <!-- Hero Branding Section -->
+  <header class="brand-hero">
+    <div class="badge">Polygon PoS • ERC-20 Verified Bytecode</div>
+    
+    <div class="brand-img-wrap">
+      <img src="./brand.jpg" alt="HOLDMYBEER ($HMB) — When Logic Fails, We Ride">
+    </div>
+
+    <div class="brand-slogan">WHEN LOGIC FAILS, WE RIDE</div>
+    <p class="brand-lead">
+      The decentralized, anti-fragile meme token built on Polygon. Immutable 0% tax policy, 100% pre-mined supply, and a genuine 20-round community distribution campaign free from centralized games.
+    </p>
+
+    <div class="btn-group">
+      <a href="https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c" class="btn btn-primary" target="_blank" rel="noopener">Explore on Polygonscan</a>
+      <a href="https://x.com/HmbToken72656" class="btn btn-outline" target="_blank" rel="noopener">Follow Official X</a>
       <a href="https://github.com/s69082535-oss/holdmybeer-token" class="btn btn-outline" target="_blank" rel="noopener">GitHub Repository</a>
-      <a href="https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c" class="btn btn-primary" target="_blank" rel="noopener">Polygonscan Explorer</a>
     </div>
   </header>
 
-  <!-- Contract Specs -->
-  <div class="card">
-    <h2>Contract Specification</h2>
-    <div class="ca-box">0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c</div>
+  <!-- Contract Architecture & Quick Specs -->
+  <section class="card">
+    <h2>Token Architecture & Security</h2>
+    <p>Smart contract deployed as a pure OpenZeppelin standard with SafeMath. Decompiled and verified via static EVM bytecode audit.</p>
+
+    <div class="ca-box">
+      <span>0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c</span>
+    </div>
+
     <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-label">Ticker</div>
+        <div class="spec-value" style="color: var(--accent-gold);">HMB</div>
+      </div>
       <div class="spec-item">
         <div class="spec-label">Network</div>
         <div class="spec-value">Polygon PoS</div>
@@ -176,83 +400,220 @@
         <div class="spec-value">18</div>
       </div>
       <div class="spec-item">
-        <div class="spec-label">Total Supply</div>
-        <div class="spec-value">1,000,000,000,000,000</div>
-      </div>
-      <div class="spec-item">
         <div class="spec-label">Trading Tax</div>
         <div class="spec-value" style="color: var(--success);">0% (Zero Tax)</div>
       </div>
-    </div>
-  </div>
-
-  <!-- Airdrop #1 Active -->
-  <div class="card">
-    <h2>Active Community Campaign: Airdrop #1</h2>
-    <p>The first of 20 scheduled holder distributions is officially underway. No forms, no off-chain points, no KYC. Verified purely via on-chain balance snapshots.</p>
-    
-    <div class="specs-grid" style="margin-top: 1rem;">
       <div class="spec-item">
-        <div class="spec-label">Round Pool</div>
-        <div class="spec-value">20,000,000,000 HMB</div>
+        <div class="spec-label">Max Total Supply</div>
+        <div class="spec-value">1,000,000,000,000,000</div>
       </div>
       <div class="spec-item">
-        <div class="spec-label">Min Qualification</div>
-        <div class="spec-value">200,000,000 HMB</div>
-      </div>
-      <div class="spec-item">
-        <div class="spec-label">Current Status</div>
-        <div class="spec-value" style="color: #f59e0b;">Phase 1: Activation Pending</div>
+        <div class="spec-label">Mint Function</div>
+        <div class="spec-value" style="color: var(--success);">Absent (Capped)</div>
       </div>
     </div>
+  </section>
 
-    <table style="margin-top: 1.5rem;">
+  <!-- Two-Pillar Tokenomics Model -->
+  <section class="card">
+    <h2>Dual Distribution Engine (Токеномика двух контуров)</h2>
+    <p>
+      Total supply is 100% pre-minted. Initial DEX liquidity serves exclusively as the baseline for market routing and price discovery. 
+      The remaining 99.9997% reserve under project control is not a private treasury for liquidation, but the designated foundation for two synchronized, long-term distribution mechanisms:
+    </p>
+
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-title">Контур 1: Рыночное распределение</div>
+        <p><strong>Decentralized Market Circulation:</strong></p>
+        <p>
+          Постепенное органическое поступление токенов в открытое обращение через децентрализованные пулы QuickSwap. 
+          Объем вывода ликвидности строго балансируется спросом рынка, исключая единовременные сбросы (Dumps) и обеспечивая формирование здоровой глубины стакана.
+        </p>
+      </div>
+
+      <div class="pillar-card teal">
+        <div class="pillar-title">Контур 2: 20 Эшелонов Аирдропов</div>
+        <p><strong>Direct Holder Distribution:</strong></p>
+        <p>
+          Серия из 20 последовательных независимых раундов для держателей. 
+          Каждый аирдроп — это прозрачное отсечение спекулянтов и адресная передача токенов непосредственно на некастодиальные кошельки верных участников сообщества.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Airdrop #1 & The Double Sieve Framework -->
+  <section class="card">
+    <h2>Airdrop #1: Механика «Двойного сита» (The Double Sieve)</h2>
+    <p>
+      Аирдроп HOLDMYBEER спроектирован как полная противоположность утомительным веб-кампаниям. Мы отменили всю рутину, заменив её простым блокчейн-принципом: <strong>«Держи актив на кошельке — сеть сама всё посчитает»</strong>.
+    </p>
+
+    <!-- 4 "NO" Features -->
+    <div class="no-grind-grid">
+      <div class="no-grind-item">
+        <span class="cross">✕</span>
+        <h5>Без KYC</h5>
+        <p>Никаких документов, селфи и сбора персональных данных.</p>
+      </div>
+      <div class="no-grind-item">
+        <span class="cross">✕</span>
+        <h5>Без соц-заданий</h5>
+        <p>Никаких подписок на 50 ботов, ретвитов и спама в Discord.</p>
+      </div>
+      <div class="no-grind-item">
+        <span class="cross">✕</span>
+        <h5>Без поинтов</h5>
+        <p>Никаких виртуальных баллов с непредсказуемой конвертацией.</p>
+      </div>
+      <div class="no-grind-item">
+        <span class="cross">✕</span>
+        <h5>Без сибилл-банов</h5>
+        <p>Никаких скрытых банов за мультиаккаунтинг. Баланс решает всё.</p>
+      </div>
+    </div>
+
+    <!-- The Double Sieve Concept -->
+    <h3>Как работает «Двойное сито» отбора:</h3>
+    <div class="sieve-box">
+      <div class="sieve-step">
+        <div class="sieve-number">1</div>
+        <div class="sieve-content">
+          <h4>Сито №1: Входной билет (Квалификационный порог)</h4>
+          <p>
+            Баланс не менее <strong>200,000,000 HMB</strong> на одном некастодиальном кошельке. 
+          </p>
+          <div class="warning-note">
+            ⚠️ <strong>Внимание:</strong> Наличие 200,000,000 HMB <u>не гарантирует</u> автоматического начисления аирдропа! 
+            Этот объем является лишь «входным билетом», дающим право кошельку участвовать в квалификационном отборе.
+          </div>
+        </div>
+      </div>
+
+      <div class="sieve-step">
+        <div class="sieve-number">2</div>
+        <div class="sieve-content">
+          <h4>Сито №2: Финальный отбор в Топ-100</h4>
+          <p>
+            Награды распределяются исключительно среди <strong>Топ-100 кошельков по величине баланса</strong> на момент финального снимка сети (snapshot). 
+            Если ваш баланс больше 200 млн, но вы находитесь на 101 месте — вы не проходите сито. Ваша задача — войти в топ-100 и удержать позицию.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Два этапа проведения Аирдропа №1:</h3>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-label">Этап 1: Активация (Предусловие)</div>
+        <div class="spec-value" style="color: var(--accent-gold); font-size: 1rem; margin-top: 0.5rem;">
+          Текущий статус: Ожидание 100 холдеров
+        </div>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-muted);">
+          Кампания переходит к активному соревнованию только тогда, когда в сети Polygon наберется минимум 100 независимых кошельков с балансом от 200 млн HMB.
+        </p>
+      </div>
+
+      <div class="spec-item">
+        <div class="spec-label">Этап 2: Конкурсный период (10 дней)</div>
+        <div class="spec-value" style="color: var(--accent-teal); font-size: 1rem; margin-top: 0.5rem;">
+          10-дневный таймер и Snapshot
+        </div>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-muted);">
+          После активации запускается 10-дневный этап удержания. Финальный снимок реестра блокчейна зафиксирует Топ-100 участников, которые и разделят 20 млрд HMB.
+        </p>
+      </div>
+    </div>
+
+    <!-- Rewards Allocation Table -->
+    <h3 style="margin-top: 2rem;">Таблица распределения пула (20,000,000,000 HMB):</h3>
+    <table>
       <thead>
         <tr>
-          <th>Place / Rank</th>
-          <th>Reward per Wallet</th>
-          <th>Total Tier Allocation</th>
+          <th>Место в Топ-100</th>
+          <th>Награда на кошелек</th>
+          <th>Всего в категории</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1st Place</td>
+          <td><strong style="color: var(--accent-gold);">1 место</strong></td>
           <td>2,500,000,000 HMB</td>
           <td>2,500,000,000 HMB</td>
         </tr>
         <tr>
-          <td>2nd – 5th Places (4 wallets)</td>
+          <td><strong>2 – 5 места</strong> (4 кошелька)</td>
           <td>1,500,000,000 HMB</td>
           <td>6,000,000,000 HMB</td>
         </tr>
         <tr>
-          <td>6th – 20th Places (15 wallets)</td>
+          <td><strong>6 – 20 места</strong> (15 кошельков)</td>
           <td>500,000,000 HMB</td>
           <td>7,500,000,000 HMB</td>
         </tr>
         <tr>
-          <td>21st – 100th Places (80 wallets)</td>
+          <td><strong>21 – 100 места</strong> (80 кошельков)</td>
           <td>50,000,000 HMB</td>
           <td>4,000,000,000 HMB</td>
         </tr>
       </tbody>
     </table>
-  </div>
+    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem;">
+      *Исключения: смарт-контракты, пулы ликвидности QuickSwap, системные адреса и биржи автоматически исключаются из финального подсчета.
+    </p>
+  </section>
 
-  <!-- DEX Liquidity & Verification Proof -->
-  <div class="card">
-    <h2>DEX Pairs & Bytecode Audit</h2>
-    <p>Liquidity has been paired on QuickSwap. The contract bytecode was audited via static EVM analysis (OpenZeppelin 0.7.4 implementation with zero hidden functions).</p>
-    <div class="btn-group">
-      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x88c86cc2dfb3cebba152798f72d1c1da5d1690a8" class="btn btn-outline" target="_blank" rel="noopener">HMB / USDT Pool on QuickSwap</a>
-      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x1bc87a450a3083ae73ac9200b0b4662fa875c0cf" class="btn btn-outline" target="_blank" rel="noopener">HMB / POL Pool on QuickSwap</a>
-      <a href="./evidence.json" class="btn btn-outline" target="_blank">Machine-Readable Audit (evidence.json)</a>
+  <!-- Decentralized Liquidity & Markets -->
+  <section class="card">
+    <h2>DEX Pairs & Verification Proofs</h2>
+    <p>Торги токеном HMB ведутся на децентрализованной бирже QuickSwap. Отслеживайте котировки и пары в реальном времени:</p>
+
+    <div class="btn-group" style="justify-content: flex-start; margin-top: 1rem;">
+      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x88c86cc2dfb3cebba152798f72d1c1da5d1690a8" class="btn btn-outline" target="_blank" rel="noopener">HMB / USDT на QuickSwap</a>
+      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x1bc87a450a3083ae73ac9200b0b4662fa875c0cf" class="btn btn-outline" target="_blank" rel="noopener">HMB / POL на QuickSwap</a>
+      <a href="./evidence.json" class="btn btn-outline" target="_blank">Аудит Байткода (evidence.json)</a>
     </div>
-  </div>
+  </section>
+
+  <!-- Knowledge Base / SEO FAQ -->
+  <section class="card">
+    <h2>Часто задаваемые вопросы (FAQ & Knowledge Base)</h2>
+
+    <div class="faq-item">
+      <div class="faq-q">Нужно ли проходить KYC или связывать соцсети для участия в аирдропе?</div>
+      <div class="faq-a">
+        Нет. Аирдроп HMB является на 100% ончейн-событием (on-chain). Вам не нужно загружать паспорт, подключать Twitter или Discord, а также выполнять рутинные задания. Достаточно иметь адрес в сети Polygon и держать токен на личном кошельке.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Почему 200,000,000 HMB не гарантируют получение выплаты?</div>
+      <div class="faq-a">
+        Потому что 200 млн HMB — это минимальный квалификационный фильтр («входной билет»). В финальную раздачу попадут ровно 100 кошельков с наибольшим балансом среди всех квалифицированных участников.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Есть ли риск сибилл-бана (Sybil ban) при использовании нескольких кошельков?</div>
+      <div class="faq-a">
+        Нет. Система не банит пользователей за владение несколькими адресами. Однако разделение средств уменьшает баланс каждого отдельного кошелька, что снижает ваши шансы попасть в Топ-100 по сравнению с консолидированным удержанием.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">Когда будут анонсированы остальные 19 аирдропов?</div>
+      <div class="faq-a">
+        Каждый последующий аирдроп анонсируется строго после завершения и полной выплаты наград предыдущего раунда. Правила и пулы будущих раундов публикуются заблаговременно на этом сайте и в официальном аккаунте X.
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© HOLDMYBEER ($HMB) Community Repository • Open-source documentation hosted on GitHub Pages.</p>
+    <p>© HOLDMYBEER ($HMB) Community Repository • Hosted transparently on GitHub Pages.</p>
+    <p style="margin-top: 0.3rem;">Contract: <code>0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c</code> • Polygon PoS</p>
   </footer>
+
 </div>
 
 </body>

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "entity": {
+    "name": "HOLDMYBEER",
+    "symbol": "HMB",
+    "network": "Polygon PoS",
+    "chainId": 137,
+    "contractAddress": "0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c",
+    "decimals": 18,
+    "totalSupply": "1000000000000000000000000000000000",
+    "totalSupplyFormatted": "1,000,000,000,000,000"
+  },
+  "audit": {
+    "compiler": "solc 0.7.4+commit.3f05b770",
+    "framework": "OpenZeppelin SafeMath / Standard ERC-20",
+    "verificationStatusOnExplorer": "Unverified (Metadata Lost)",
+    "publicEvidenceRepository": "https://github.com/s69082535-oss/holdmybeer-token",
+    "securityParameters": {
+      "hasMintFunction": false,
+      "hasBlacklist": false,
+      "hasPausable": false,
+      "hasSelfDestruct": false,
+      "hasCustomFeeOnTransfer": false,
+      "transferTaxPercentage": 0
+    },
+    "functionSelectors": [
+      { "selector": "0x06fdde03", "signature": "name()" },
+      { "selector": "0x095ea7b3", "signature": "approve(address,uint256)" },
+      { "selector": "0x18160ddd", "signature": "totalSupply()" },
+      { "selector": "0x23b872dd", "signature": "transferFrom(address,address,uint256)" },
+      { "selector": "0x313ce567", "signature": "decimals()" },
+      { "selector": "0x39509351", "signature": "increaseAllowance(address,uint256)" },
+      { "selector": "0x70a08231", "signature": "balanceOf(address)" },
+      { "selector": "0x95d89b41", "signature": "symbol()" },
+      { "selector": "0xa457c2d7", "signature": "decreaseAllowance(address,uint256)" },
+      { "selector": "0xa9059cbb", "signature": "transfer(address,uint256)" },
+      { "selector": "0xdd62ed3e", "signature": "allowance(address,address)" }
+    ]
+  },
+  "distribution": {
+    "model": "Two-pillar: Market Liquidity & 20 Holder Airdrops",
+    "airdropCampaign": {
+      "totalRoundsPlanned": 20,
+      "currentRound": 1,
+      "round1Pool": "20000000000",
+      "round1Threshold": "200000000",
+      "round1Status": "Phase 1: Awaiting 100 Qualified Wallets"
+    }
+  }
+}

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOLDMYBEER ($HMB) — Official Documentation & Airdrop Portal</title>
+  <meta name="description" content="Official portal for HOLDMYBEER (HMB) token on Polygon. Verified contract specs, 0% tax proof, DEX pairs, and the 20 Airdrops campaign rules.">
+  <link rel="canonical" href="https://s69082535-oss.github.io/holdmybeer-token/">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="HOLDMYBEER ($HMB) — Official Token Portal">
+  <meta property="og:description" content="Token specs, static bytecode audit, 0% tax, and live rules for Airdrop #1 (20B Pool).">
+  <meta property="og:url" content="https://s69082535-oss.github.io/holdmybeer-token/">
+  <meta property="og:type" content="website">
+
+  <!-- Schema.org JSON-LD Entity Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization",
+        "name": "HOLDMYBEER Project",
+        "url": "https://s69082535-oss.github.io/holdmybeer-token/",
+        "sameAs": [
+          "https://x.com/HmbToken72656",
+          "https://github.com/s69082535-oss/holdmybeer-token"
+        ]
+      },
+      {
+        "@type": "FinancialProduct",
+        "@id": "https://s69082535-oss.github.io/holdmybeer-token/#token",
+        "name": "HOLDMYBEER",
+        "alternateName": "HMB",
+        "category": "CryptoCurrency",
+        "description": "ERC-20 token deployed on Polygon with a fixed supply of 1,000,000,000,000,000 HMB, 0% tax, and a 20-round community distribution campaign.",
+        "url": "https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c",
+        "provider": {
+          "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization"
+        }
+      },
+      {
+        "@type": "Event",
+        "@id": "https://s69082535-oss.github.io/holdmybeer-token/#airdrop1",
+        "name": "HOLDMYBEER Community Airdrop #1",
+        "description": "First of 20 community airdrops distributing 20,000,000,000 HMB to the Top-100 holders holding at least 200,000,000 HMB.",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+        "location": {
+          "@type": "VirtualLocation",
+          "url": "https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c"
+        },
+        "organizer": {
+          "@id": "https://s69082535-oss.github.io/holdmybeer-token/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0c0f17;
+      --card-bg: #141926;
+      --border: #222b40;
+      --accent: #8247e5;
+      --accent-hover: #985bf2;
+      --text: #f0f3fa;
+      --text-muted: #94a3b8;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 2rem 0; }
+    header { text-align: center; margin-bottom: 3rem; }
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(130, 71, 229, 0.15);
+      border: 1px solid var(--accent);
+      color: #c4b5fd;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+    p.lead { color: var(--text-muted); font-size: 1.15rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    h2 { font-size: 1.5rem; margin-bottom: 1rem; color: #fff; border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .spec-item {
+      background: rgba(255, 255, 255, 0.02);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .spec-label { color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; }
+    .spec-value { font-size: 1.1rem; font-weight: 600; margin-top: 0.25rem; word-break: break-all; }
+    .ca-box {
+      background: #06080d;
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.95rem;
+      color: #38bdf8;
+      word-break: break-all;
+      margin: 0.5rem 0;
+    }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { background: rgba(255, 255, 255, 0.05); }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { text-align: left; padding: 0.75rem; border-bottom: 1px solid var(--border); font-size: 0.95rem; }
+    th { color: var(--text-muted); }
+    footer { text-align: center; padding: 3rem 0; color: var(--text-muted); font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="badge">Polygon PoS • ERC-20 Official Portal</div>
+    <h1>HOLDMYBEER ($HMB)</h1>
+    <p class="lead">Decentralized meme-asset with an immutable 0% tax policy and a 20-round transparent holder distribution campaign.</p>
+    <div class="btn-group" style="justify-content: center;">
+      <a href="https://x.com/HmbToken72656" class="btn btn-outline" target="_blank" rel="noopener">Official X (Twitter)</a>
+      <a href="https://github.com/s69082535-oss/holdmybeer-token" class="btn btn-outline" target="_blank" rel="noopener">GitHub Repository</a>
+      <a href="https://polygonscan.com/token/0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c" class="btn btn-primary" target="_blank" rel="noopener">Polygonscan Explorer</a>
+    </div>
+  </header>
+
+  <!-- Contract Specs -->
+  <div class="card">
+    <h2>Contract Specification</h2>
+    <div class="ca-box">0x4Fc68a545F56e04E12E2f98b4AA4Fa6ea160596c</div>
+    <div class="specs-grid">
+      <div class="spec-item">
+        <div class="spec-label">Network</div>
+        <div class="spec-value">Polygon PoS</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Decimals</div>
+        <div class="spec-value">18</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Total Supply</div>
+        <div class="spec-value">1,000,000,000,000,000</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Trading Tax</div>
+        <div class="spec-value" style="color: var(--success);">0% (Zero Tax)</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Airdrop #1 Active -->
+  <div class="card">
+    <h2>Active Community Campaign: Airdrop #1</h2>
+    <p>The first of 20 scheduled holder distributions is officially underway. No forms, no off-chain points, no KYC. Verified purely via on-chain balance snapshots.</p>
+    
+    <div class="specs-grid" style="margin-top: 1rem;">
+      <div class="spec-item">
+        <div class="spec-label">Round Pool</div>
+        <div class="spec-value">20,000,000,000 HMB</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Min Qualification</div>
+        <div class="spec-value">200,000,000 HMB</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-label">Current Status</div>
+        <div class="spec-value" style="color: #f59e0b;">Phase 1: Activation Pending</div>
+      </div>
+    </div>
+
+    <table style="margin-top: 1.5rem;">
+      <thead>
+        <tr>
+          <th>Place / Rank</th>
+          <th>Reward per Wallet</th>
+          <th>Total Tier Allocation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1st Place</td>
+          <td>2,500,000,000 HMB</td>
+          <td>2,500,000,000 HMB</td>
+        </tr>
+        <tr>
+          <td>2nd – 5th Places (4 wallets)</td>
+          <td>1,500,000,000 HMB</td>
+          <td>6,000,000,000 HMB</td>
+        </tr>
+        <tr>
+          <td>6th – 20th Places (15 wallets)</td>
+          <td>500,000,000 HMB</td>
+          <td>7,500,000,000 HMB</td>
+        </tr>
+        <tr>
+          <td>21st – 100th Places (80 wallets)</td>
+          <td>50,000,000 HMB</td>
+          <td>4,000,000,000 HMB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DEX Liquidity & Verification Proof -->
+  <div class="card">
+    <h2>DEX Pairs & Bytecode Audit</h2>
+    <p>Liquidity has been paired on QuickSwap. The contract bytecode was audited via static EVM analysis (OpenZeppelin 0.7.4 implementation with zero hidden functions).</p>
+    <div class="btn-group">
+      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x88c86cc2dfb3cebba152798f72d1c1da5d1690a8" class="btn btn-outline" target="_blank" rel="noopener">HMB / USDT Pool on QuickSwap</a>
+      <a href="https://www.geckoterminal.com/polygon_pos/pools/0x1bc87a450a3083ae73ac9200b0b4662fa875c0cf" class="btn btn-outline" target="_blank" rel="noopener">HMB / POL Pool on QuickSwap</a>
+      <a href="./evidence.json" class="btn btn-outline" target="_blank">Machine-Readable Audit (evidence.json)</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>© HOLDMYBEER ($HMB) Community Repository • Open-source documentation hosted on GitHub Pages.</p>
+  </footer>
+</div>
+
+</body>
+</html>
